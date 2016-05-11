@@ -1,0 +1,24 @@
+<md-sidenav-layout fullscreen>
+  <md-sidenav #start>
+    <md-nav-list>
+      <a md-list-item [routerLink]="['']">Home</a>
+      <a md-list-item [routerLink]="['list']">List</a>
+
+    </md-nav-list>
+    <button md-button (click)="start.close()">CLOSE</button>
+  </md-sidenav>
+  <div>
+
+    <md-toolbar color="accent">
+      <md-icon (click)="start.open()">menu</md-icon>
+      <span>TSC-MD-NG-2.0 App</span>
+    </md-toolbar>
+    
+    <div><angular2cli-app></angular2cli-app></div>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    
+  </div>
+</md-sidenav-layout>
